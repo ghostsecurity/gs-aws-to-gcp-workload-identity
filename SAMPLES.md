@@ -10,7 +10,7 @@ Assuming this is running on an EC2 instance with a role named `arn:aws:iam::1234
 import json
 import requests
 
-from gs_aws_to_gcp_workload_identity import AwsToGcpTokenService
+from gs_aws_to_gcp_workload_identity.main import AwsToGcpTokenService
 
 aws_to_gcp_token_service = AwsToGcpTokenService(
     gcp_workload_provider_path="projects/4556456456456/locations/global/workloadIdentityPools/aws-to-gcp-pool/providers/aws-to-gcp-provider",
@@ -59,7 +59,7 @@ Running this prints:
 import json
 import requests
 
-from gs_aws_to_gcp_workload_identity import AwsToGcpTokenService
+from gs_aws_to_gcp_workload_identity.main import AwsToGcpTokenService
 
 aws_to_gcp_token_service = AwsToGcpTokenService(
     gcp_workload_provider_path="projects/4556456456456/locations/global/workloadIdentityPools/aws-to-gcp-pool/providers/aws-to-gcp-provider",

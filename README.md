@@ -146,7 +146,7 @@ projects/4556456456456/locations/global/workloadIdentityPools/aws-to-gcp-pool/pr
 ```python
 #!/usr/bin/env python3
 
-from gs_aws_to_gcp_workload_identity import AwsToGcpTokenService
+from gs_aws_to_gcp_workload_identity.main import AwsToGcpTokenService
 
 aws_to_gcp_token_service = AwsToGcpTokenService(
     gcp_workload_provider_path="<insert full workload identity path>",
