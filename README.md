@@ -11,10 +11,7 @@ Set some shell variables for AWS related items for easier setup:
 ```bash
 export AWS_ACCOUNT_ID="123456789012"
 export AWS_ROLE_NAME="demo-wif-iam-role"
-# If you are running this on an EC2 instance or Lambda with a role attached, the ARN is just the role ARN
-export AWS_ROLE_ARN="arn:aws:iam::${AWS_ACCOUNT_ID}:role/${AWS_ROLE_NAME}"
-# If you are assuming a role via some other means, use this ARN format instead
-# export AWS_ROLE_ARN="arn:aws:sts::${AWS_ACCOUNT_ID}:assumed-role/${AWS_ROLE_NAME}"
+export AWS_ASSUME_ROLE_ARN="arn:aws:sts::${AWS_ACCOUNT_ID}:assumed-role/${AWS_ROLE_NAME}"
 ```
 
 Note that the `AWS_ROLE_NAME` can be the name of an existing role (for example, attached to an EC2 instance or Lambda) or you can create a new one.  It needs no specific policies attached on the AWS side, but you can if that role needs to use AWS services as well.
@@ -127,7 +124,7 @@ Grant permissions directly on the service account so the AWS Role ARN can exchan
 
 ```bash
 gcloud iam service-accounts add-iam-policy-binding "${GCP_SA_EMAIL}" \
-  --member "principalSet://iam.googleapis.com/projects/${GCP_PROJECT_NUMBER}/locations/global/workloadIdentityPools/${GCP_WORKLOAD_POOL_ID}/attribute.aws_role/${AWS_ROLE_ARN}" \
+  --member "principalSet://iam.googleapis.com/projects/${GCP_PROJECT_NUMBER}/locations/global/workloadIdentityPools/${GCP_WORKLOAD_POOL_ID}/attribute.aws_role/${AWS_ASSUME_ROLE_ARN}" \
   --role roles/iam.workloadIdentityUser
 ```
 
