@@ -167,7 +167,7 @@ id_token, expiry_utc_epoch = aws_to_gcp_token_service.get_identity_token(audienc
 
 ## Samples
 
-See [SAMPLES.md](SAMPLES.md) for working examples.
+See [SAMPLES.md](./SAMPLES.md) for working examples.
 
 ## FAQ
 

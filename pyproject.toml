@@ -10,6 +10,7 @@ homepage = "https://github.com/ghostsecurity/gs-aws-to-gcp-workload-identity"
 repository = "https://github.com/ghostsecurity/gs-aws-to-gcp-workload-identity"
 include = [
     "LICENSE",
+    "SAMPLES.md",
 ]
 
 [tool.poetry.dependencies]
