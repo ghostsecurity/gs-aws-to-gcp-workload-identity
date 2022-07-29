@@ -17,9 +17,6 @@ from botocore.auth import SigV4Auth
 from botocore.awsrequest import AWSRequest
 from botocore.credentials import ReadOnlyCredentials
 
-# import sys
-# logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
-
 logger = logging.getLogger(__name__)
 
 class AwsToGcpTokenService:

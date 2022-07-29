@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "gs-aws-to-gcp-workload-identity"
-version = "0.1.1"
+version = "0.1.2"
 description = "Helper for obtaining GCP Tokens via AWS-to-GCP Workload Identity Federation"
 keywords = ["aws", "gcp", "workload", "identity", "federation"]
 authors = ["Ghost Security <info@ghost.security>"]

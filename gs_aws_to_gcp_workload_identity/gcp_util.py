@@ -1,9 +1,11 @@
 import json
+import logging
 import requests
 
 from google.auth import crypt
 from google.auth import jwt
 
+logger = logging.getLogger(__name__)
 
 class GcpUtil:
     def __init__(self) -> None:
@@ -26,7 +28,7 @@ class GcpUtil:
         )
 
         if response.status_code != 200:
-            logger.fatal("Error getting Identity token")
+            logger.fatal(f"Error getting token via {url}")
             logger.error(response.text)
             response.raise_for_status()
 

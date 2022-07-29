@@ -16,9 +16,6 @@ from botocore.credentials import ReadOnlyCredentials
 
 from gs_aws_to_gcp_workload_identity.gcp_util import GcpUtil
 
-# import sys
-# logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
-
 logger = logging.getLogger(__name__)
 
 class GcpToken:
