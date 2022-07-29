@@ -2,8 +2,15 @@
 name = "gs-aws-to-gcp-workload-identity"
 version = "0.1.0"
 description = "Helper for obtaining GCP Tokens via AWS-to-GCP Workload Identity Federation"
-authors = ["Brad Geesaman"]
+keywords = ["aws", "gcp", "workload", "identity", "federation"]
+authors = ["Ghost Security <info@ghost.security>"]
 license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/ghostsecurity/gs-aws-to-gcp-workload-identity"
+repository = "https://github.com/ghostsecurity/gs-aws-to-gcp-workload-identity"
+include = [
+    "LICENSE",
+]
 
 [tool.poetry.dependencies]
 python = "^3.9"
